@@ -1,9 +1,9 @@
 export type TErrorSources = {
-  path: string | number;
+  path: string | number | PropertyKey;
   message: string;
 }[];
 
-export type TGenericErrorMessage = {
+export type TGenericErrorResponse = {
   message: string;
   statusCode: number;
   errorSources: TErrorSources;

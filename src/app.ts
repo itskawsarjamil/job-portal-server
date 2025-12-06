@@ -1,9 +1,9 @@
 import cors from 'cors';
-import express from 'express';
+import express, { Application } from 'express';
 import globalErrorHandler from './app/middleware/globalErrorHandler';
 import NotFound from './app/middleware/notFound';
 import router from './app/routes';
-export const app = express();
+export const app: Application = express();
 
 app.use(cors());
 app.use(express.json());
